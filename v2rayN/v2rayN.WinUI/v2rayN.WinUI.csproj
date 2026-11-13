@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>v2rayN</AssemblyName>
+    <RootNamespace>v2rayN.WinUI</RootNamespace>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <UseWinUI>true</UseWinUI>
+    <Platforms>x64</Platforms>
+    <Platform>x64</Platform>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <WindowsPackageType>None</WindowsPackageType>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>..\v2rayN\Resources\v2rayN.ico</ApplicationIcon>
+    <Nullable>annotations</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CETCompat>false</CETCompat>
+    <DefineConstants>$(DefineConstants);DISABLE_XAML_GENERATED_MAIN</DefineConstants>
+    <UseSystemResourceKeys>false</UseSystemResourceKeys>
+    <PublishSingleFile>false</PublishSingleFile>
+    <ApplicationTitle>v2rayN</ApplicationTitle>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" />
+    <PackageReference Include="ReactiveUI.WinUI" />
+    <PackageReference Include="System.Drawing.Common" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceLib\ServiceLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\v2rayN\Resources\NotifyIcon1.ico" Link="NotifyIcon1.ico" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\v2rayN\Resources\NotifyIcon2.ico" Link="NotifyIcon2.ico" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\v2rayN\Resources\NotifyIcon3.ico" Link="NotifyIcon3.ico" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\v2rayN\Resources\NotifyIcon4.ico" Link="NotifyIcon4.ico" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\v2rayN\Resources\v2rayN.ico" Link="v2rayN.ico" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
